@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1/poker?autoReconnect=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=utf8mb4&amp;charset=utf8mb4&amp;collation=utf8mb4_general_ci&amp;parseTime=True&amp;loc=Local&amp;character_set_server=utf8mb4</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+        <property name="connection.username">root</property>
+        <property name="connection.password">Dert869$$</property>
+
+
+        <property name="hibernate.connection.CharSet">utf8</property>
+        <property name="hibernate.connection.characterEncoding">utf8</property>
+        <property name="hibernate.connection.useUnicode">true</property>
+
+
+        <property name="show_sql">false</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <property name="hibernate.c3p0.acquire_increment">2</property>
+        <property name="hibernate.c3p0.idle_test_period">100</property> <!-- seconds -->
+        <property name="hibernate.c3p0.max_size">100</property>
+        <property name="hibernate.c3p0.max_statements">0</property>
+        <property name="hibernate.c3p0.min_size">10</property>
+        <property name="hibernate.c3p0.testConnectionOnCheckin">true</property>
+        <property name="hibernate.c3p0.timeout">1800</property>
+
+
+
+        <mapping resource="user.hbm.xml"/>
+
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.AntonSibgatulin.user">
+
+    <class name="User" table="users">
+        <meta attribute="class-description">
+            This class contains the user detail.
+        </meta>
+        <id name="id" type="java.lang.Integer" column="id">
+
+        </id>
+        <property name="login" column="login" type="string"/>
+        <property name="password" column="password" type="string"/>
+        <property name="type" column="type" type="java.lang.Integer"/>
+
+        <property name="money" column="money" type="java.lang.Integer"/>
+        <property name="score" column="score" type="java.lang.Integer"/>
+        <property name="ban" column="ban" type="java.lang.Integer"/>
+
+    </class>
+</hibernate-mapping>
